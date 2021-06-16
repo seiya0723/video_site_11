@@ -147,7 +147,7 @@
                     <a class="btn-gradient-delete" href="{% url 'tube:delete' video.id %}">削除</a>
                     <a class="btn-gradient-success" href="{% url 'tube:update' video.id %}">編集</a>
 
-                    <!-- Ajax でUPDATEメソッドを送信 -->
+                    <!-- Ajax でPUTメソッドを送信 -->
                     <form id="video_update_form" action="{% url 'tube:single_mod' video.id %}" method="">
                         {% csrf_token %}
                         <input class="form-control" type="text" value="{{ video.title }}" name="title">

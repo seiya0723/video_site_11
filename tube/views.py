@@ -372,7 +372,7 @@ class SingleModView(LoginRequiredMixin,views.APIView):
             return JsonResponse(json)
 
         #TIPS:get_object_or_404を使う方法もある、いずれにせよレコード単体のオブジェクトをシリアライザの第一引数に指定して、編集対象を指定する必要がある点で同じ。こちらは存在しない場合404をリターンするためif文で分岐させる必要はない。
-        #instance    = get_object_or_404(Video.objects.all(), pk=target)
+        #instance    = get_object_or_404(Video.objects.all(), pk=video_pk)
 
 
         #受け取ったリクエストのdataにAjaxの送信内容が含まれているのでこれをバリデーション。編集対象は先ほどvideo_pkで特定したレコード単体
