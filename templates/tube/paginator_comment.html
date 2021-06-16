@@ -1,0 +1,7 @@
+<ul class="pagination_area">
+    {% for page in pages %}
+
+    <button>{{ page.name }}</button>
+    <input class="pagination_content pagination_button comment_page" type="button" value="{{ page.name }}">
+    {% endfor %}
+</ul>
